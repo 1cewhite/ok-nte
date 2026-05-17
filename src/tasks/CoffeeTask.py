@@ -12,6 +12,7 @@ class CoffeeTask(NTEOneTimeTask, BaseNTETask):
     覆盖领取收益、商品优化、补货购买. 默认开启领取收益和补货购买,
     商品优化默认关闭以避免未明确选择就替换商品.
     """
+    DEFAULT_MOVE=True
 
     CONF_COLLECT_INCOME = "领取收益"
     CONF_RESTOCK_GOODS = "补货货物"
