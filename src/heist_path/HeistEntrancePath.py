@@ -1,11 +1,12 @@
 from src.heist_path.HeistPath import HeistPath
 
-# 寻路到小吱
-class gotoHeist(HeistPath):
-    def run_path(self):
-        return self.goto_Heist()
 
-    def goto_Heist(self):
+# 寻路到小吱
+class HeistEntrancePath(HeistPath):
+    def run_path(self):
+        self.goto_heist_entrance()
+
+    def goto_heist_entrance(self):
         self.log_round_info("正在寻路到小吱")
         self.sleep(0.50)
         self.switch_to_runner()

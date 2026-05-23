@@ -8,7 +8,7 @@ from qfluentwidgets import FluentIcon
 
 from src import text_white_color
 from src.combat.BaseCombatTask import BaseCombatTask
-from src.heist_path.gotoHeist import gotoHeist
+from src.heist_path.HeistEntrancePath import HeistEntrancePath
 from src.heist_path.HeistPathA import HeistPathA
 from src.Labels import Labels
 from src.tasks.NTEOneTimeTask import NTEOneTimeTask
@@ -184,7 +184,7 @@ class AutoHeistTask(NTEOneTimeTask, BaseCombatTask):
         self.click_nearest_map_teleport()
         self.wait_in_team(settle_time=1)
         try:
-            gotoHeist(self).run_path()
+            HeistEntrancePath(self).run_path()
         except AbortException as e:
             self.log_warning(e)
 
